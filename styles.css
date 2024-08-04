@@ -76,19 +76,18 @@ main {
   display: flex;
   flex-direction: row;
   flex-grow: 1;
-  margin: 20px 0;
-  height: 50vh;
+  margin: 20px auto;
   width: 60%;
-  margin: auto;
+  height: 50vh;
   border: 2px solid black;
   border-radius: 10px;
 }
 
 aside {
   display: flex;
-  width: 50%;
   justify-content: center;
   align-items: center;
+  flex: 1;
 }
 
 aside img {
@@ -99,8 +98,8 @@ aside img {
 }
 
 .text {
-  height: 80%;
-  padding: 5% 0 0 10%;
+  flex: 1;
+  padding: 5%;
 }
 
 .text h1 {
@@ -212,22 +211,32 @@ footer p {
 @media (max-width: 992px) {
   main {
     width: 90%;
-    flex-direction: column;
     height: auto;
   }
 
-  aside,
-  .text {
-    width: 100%;
-    text-align: center;
+  .text h1 {
+    font-size: 4rem;
   }
 
-  aside img {
-    height: 50%;
+  .text p {
+    font-size: 2rem;
+  }
+
+  nav a {
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    height: auto;
+  }
+
+  aside, .text {
+    width: 100%;
+  }
+
   nav {
     flex-direction: column;
   }
