@@ -92,8 +92,10 @@ aside {
 }
 
 aside img {
-  height: 70%;
-  resize: both;
+  max-width: 100%;
+  max-height: 90%;
+  height: auto;
+  object-fit: contain;
 }
 
 .text {
@@ -157,7 +159,7 @@ footer p {
   text-decoration: none;
   font-size: 1.6rem;
   overflow: hidden;
-  width: auto
+  width: auto;
 }
 
 .contact-info a::after {
@@ -186,4 +188,86 @@ footer p {
 .contact-info a:hover::after,
 .contact-info a:focus::after {
   transform: translate3d(0, 0, 0);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  main {
+    width: 80%;
+  }
+
+  .text h1 {
+    font-size: 4.8rem;
+  }
+
+  .text p {
+    font-size: 2.4rem;
+  }
+
+  nav a {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 992px) {
+  main {
+    width: 90%;
+    flex-direction: column;
+    height: auto;
+  }
+
+  aside,
+  .text {
+    width: 100%;
+    text-align: center;
+  }
+
+  aside img {
+    height: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    font-size: 2rem;
+    padding: 10px 0;
+  }
+
+  header {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  nav a {
+    font-size: 1.6rem;
+  }
+
+  .text h1 {
+    font-size: 3.2rem;
+  }
+
+  .text p {
+    font-size: 1.6rem;
+  }
+
+  footer h2 {
+    font-size: 2rem;
+  }
+
+  footer p {
+    font-size: 1.2rem;
+  }
+
+  .icons img {
+    width: 30px;
+  }
+
+  .contact-info a {
+    font-size: 1.2rem;
+  }
 }
